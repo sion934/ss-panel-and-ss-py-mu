@@ -55,7 +55,7 @@ install_centos_ssr(){
 	easy_install supervisor
 	#clone shadowsocks
 	cd /root
-	git clone -b manyuser https://github.com/sion934/shadowsocks.git "/root/shadowsocks"
+	git clone https://github.com/sion934/shadowsocks.git "/root/shadowsocks"
 	#install devel
 	cd /root/shadowsocks
 	yum -y install lsof lrzsz
@@ -82,7 +82,7 @@ install_ubuntu_ssr(){
 	apt-get install python-pip git -y
 	pip install cymysql
 	cd /root
-	git clone -b manyuser https://github.com/glzjin/shadowsocks.git "/root/shadowsocks"
+	git clone https://github.com/sion934/shadowsocks.git "/root/shadowsocks"
 	cd shadowsocks
 	pip install -r requirements.txt
 	chmod +x *.sh
