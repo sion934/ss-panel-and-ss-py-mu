@@ -4,7 +4,7 @@
 install_ss_panel_mod_v3(){
 	yum -y remove httpd
 	yum install -y unzip zip git
-	wget -c https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/lnmp1.3.zip && unzip lnmp1.3.zip && cd lnmp1.3 && chmod +x install.sh && ./install.sh lnmp
+	wget -c https://raw.githubusercontent.com/sion934/ss-panel-and-ss-py-mu/master/lnmp1.3.zip && unzip lnmp1.3.zip && cd lnmp1.3 && chmod +x install.sh && ./install.sh lnmp
 	cd /home/wwwroot/default/
 	rm -rf index.html
 	git clone https://github.com/mmmwhy/mod.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
@@ -55,7 +55,7 @@ install_centos_ssr(){
 	easy_install supervisor
 	#clone shadowsocks
 	cd /root
-	git clone -b manyuser https://github.com/glzjin/shadowsocks.git "/root/shadowsocks"
+	git clone -b manyuser https://github.com/sion934/shadowsocks.git "/root/shadowsocks"
 	#install devel
 	cd /root/shadowsocks
 	yum -y install lsof lrzsz
